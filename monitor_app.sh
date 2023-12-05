@@ -1,14 +1,19 @@
 #!/bin/bash
 
 dir="/home/haowentao/Miao-Yunzai/Qsign/unidbg-fetch-qsign"
+bindir="$dir/bin/unidbg-fetch-qsign"
 version="8.9.93"
-basePathDir="$dir/txlib/"
-app="$dir/bin/unidbg-fetch-qsign --basePath=txlib/$version  > output.log 2>&1"
+basePathDir="--basePath=$dir/txlib/$version"
+output="output.log"
+superdo="sudo"
+
+app="sudo bash $bindir $basePathDir $output"
+echo "$app"
 # 提权为root
 sudo -v
 # 启动API，将输出重定向到临时文件
 # bash $dir/bin/unidbg-fetch-qsign --basePath=txlib/8.9.93  > output.log 2>&1
-bash $app
+sudo bash $bindir $basePathDir > $output 2>&1
 while true; do
     
     # 检查输出文件中是否包含关键字
