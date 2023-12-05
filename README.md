@@ -1,28 +1,34 @@
-# 解决喵崽的QSignApi自动崩溃的脚本
+# 解决喵崽的QSignApi自动崩溃问题的linux脚本
+
+###请配合https://gitee.com/touchscale/Qsign 使用
 
 #### 介绍
-高版本的ICQQ使用的API经常崩溃，换成低版本以后登录不上，故写脚本自动重启之。
-https://gitee.com/touchscale/Qsign/issues/I8GLZN中提供了windows的重启方式。本脚本适用于ubuntu。
+喵崽是一款很好用的原神QQ机器人，但是其使用的ICQQ常有问题，为了解决ICQQ的问题，需要自建API（https://gitee.com/touchscale/Qsign）。
 
-目前用起来还有些问题，作者水平有限，没搞懂。
+但是，高版本的ICQQ使用的API经常崩溃，换成低版本以后又会登录不上，故写脚本自动重启之。
+https://gitee.com/touchscale/Qsign/issues/I8GLZN  中提供了windows的重启方式，但是没有其他操作系统的做法。
+本脚本适用于ubuntu，其他linux系统或许也可用，自己试试吧。
+
 
 #### 安装教程
 
-克隆仓库或下载monitor_app.sh文件
+克隆仓库或下载monitor_app.sh文件，配置好变量
 
 chmod +x monitor_app.sh #赋予可执行权限
 
 su #切换到root用户
 
-#### 使用说明
+./monitor_app.sh #开始运行
 
-修改monitor_app.sh中的路径为你的Qsign所在的正确位置
+#### 变量配置说明
 
-修改monitor_app.sh中的版本为你需要的版本号
+修改monitor_app.sh中的路径（dir）为你的Qsign所在的正确位置
 
-检测间隔可以自行修改，默认15秒一次
+修改monitor_app.sh中的版本（version）为你需要的版本号
 
-在screen中运行脚本即可
+检测间隔可以自行修改，默认10秒一次
+
+在screen中运行脚本（推荐）, 或者用别的喜欢的方式把脚本挂在后台运行即可
 
 #### 参与贡献
 
