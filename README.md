@@ -1,6 +1,6 @@
 # 解决喵崽的QSignApi自动崩溃问题的linux脚本
 
-###请配合https://gitee.com/touchscale/Qsign 使用
+### 请配合https://gitee.com/touchscale/Qsign 使用
 
 #### 介绍
 喵崽是一款很好用的原神QQ机器人，但是其使用的ICQQ常有问题，为了解决ICQQ的问题，需要自建API（https://gitee.com/touchscale/Qsign）。
