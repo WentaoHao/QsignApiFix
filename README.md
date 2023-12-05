@@ -2,29 +2,30 @@
 
 #### 介绍
 高版本的ICQQ使用的API经常崩溃，换成低版本以后登录不上，故写脚本自动重启之。
-
-#### 软件架构
-软件架构说明
-
+https://gitee.com/touchscale/Qsign/issues/I8GLZN中提供了windows的重启方式。本脚本适用于ubuntu。
 
 #### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+克隆仓库或下载monitor_app.sh文件
+
+chmod +x monitor_app.sh #赋予可执行权限
+
+
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+修改monitor_app.sh中的路径为你的Qsign所在的正确位置
+
+修改monitor_app.sh中的版本为你需要的版本号
+
+检测间隔可以自行修改，默认15秒一次
+
+在screen中运行脚本即可
 
 #### 参与贡献
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+1.  你自己随便改就行
+
 
 
 #### 特技
