@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# 检查当前用户是否是root
+if [ "$(id -u)" -ne 0 ]; then
+    echo "This script must be run as root. Exiting."
+    exit 1
+fi
+
 #改成自己的目录
 dir="/home/haowentao/Miao-Yunzai/Qsign/unidbg-fetch-qsign"
 #改成自己的版本
@@ -19,12 +25,12 @@ sudo bash $bindir $basePathDir > $output 2>&1
 while true; do
     
     # 检查输出文件中是否包含关键字
-    if grep -qE 'WARNING|ERROR|警告' output.log; then
+    if grep -qE 'WARNING|ERROR|警告|error' output.log; then
         echo "Detected warning or error. Restarting the app..."
         
         # 获取java的进程ID并杀死它
         pid=$(pgrep -f "java")
-        kill $pid
+        kill -9 $pid
         # 删除日志文件
         rm -f output.log
         # 等待一段时间，然后重新启动API
