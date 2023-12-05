@@ -1,14 +1,16 @@
 #!/bin/bash
 
+#改成自己的目录
 dir="/home/haowentao/Miao-Yunzai/Qsign/unidbg-fetch-qsign"
-bindir="$dir/bin/unidbg-fetch-qsign"
+#改成自己的版本
 version="8.9.93"
+bindir="$dir/bin/unidbg-fetch-qsign"
 basePathDir="--basePath=$dir/txlib/$version"
 output="output.log"
-superdo="sudo"
 
-app="sudo bash $bindir $basePathDir $output"
-echo "$app"
+
+# app="sudo bash $bindir $basePathDir $output"
+# echo "$app"
 # 提权为root
 sudo -v
 # 启动API，将输出重定向到临时文件
@@ -27,7 +29,7 @@ while true; do
         rm -f output.log
         # 等待一段时间，然后重新启动API
         sleep 5
-        bash $app
+        sudo bash $bindir $basePathDir > $output 2>&1
         
     else
         echo "No warning or error detected."
