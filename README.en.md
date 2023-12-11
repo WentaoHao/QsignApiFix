@@ -1,36 +1,41 @@
-# 解决喵崽的QSignApi自动崩溃的脚本
+# Linux Script to Solve QSignApi Auto-Crash Issue for Miao-YunzaiBot
 
-#### Description
-高版本的ICQQ使用的API经常崩溃，换成低版本以后登录不上，故写脚本自动重启之。
+### Please use with [Qsign](https://gitee.com/touchscale/Qsign)
 
-#### Software Architecture
-Software architecture description
+#### Introduction
+Miao-Yunzai is a handy Genshin Impact QQ robot, but it often encounters issues with the ICQQ it uses. To address the problems with ICQQ, it's necessary to set up a self-built API ([Qsign](https://gitee.com/touchscale/Qsign)).
 
-#### Installation
+However, the API used by higher versions of ICQQ tends to crash frequently, and switching to lower versions may result in login failures. Therefore, this script is written to automatically restart it.
+[Here](https://gitee.com/touchscale/Qsign/issues/I8GLZN) provides a restart method for Windows, but there is no method for other operating systems. This script is suitable for Ubuntu, and perhaps other Linux systems may also work. Give it a try.
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+#### Installation Tutorial
 
-#### Instructions
+1. First, configure the Qsign signature API and determine the version.
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+2. Clone the repository or download the `monitor_app.sh` file and configure the variables.
+
+3. `chmod +x monitor_app.sh` #grant executable permissions
+
+4. `su` #switch to the root user
+
+5. `./monitor_app.sh` #start running
+
+6. After confirming that it runs normally, run the script in `screen` (recommended) or run the script in the background in any other preferred way.
+
+#### Variable Configuration Explanation
+
+1. Modify the path (`dir`) in `monitor_app.sh` to the correct location of your Qsign.
+
+2. Modify the version (`version`) in `monitor_app.sh` to the version number you need.
+
+3. The detection interval can be modified as needed, defaulting to once every 10 seconds.
+
+#### Existing Issues
+
+1. This script will kill the Java process. If there are other services running in Java form, please be cautious.
+
+2. Running for a long time will gradually consume memory, with the `Java` process taking up approximately 300MB. Controlling its memory usage can be achieved by regularly restarting it. However, the memory consumed by the `node` process will continue to increase. Killing the `node` process with a command may affect other processes dependent on node, so this part is not included.
 
 #### Contribution
 
-1.  Fork the repository
-2.  Create Feat_xxx branch
-3.  Commit your code
-4.  Create Pull Request
-
-
-#### Gitee Feature
-
-1.  You can use Readme\_XXX.md to support different languages, such as Readme\_en.md, Readme\_zh.md
-2.  Gitee blog [blog.gitee.com](https://blog.gitee.com)
-3.  Explore open source project [https://gitee.com/explore](https://gitee.com/explore)
-4.  The most valuable open source project [GVP](https://gitee.com/gvp)
-5.  The manual of Gitee [https://gitee.com/help](https://gitee.com/help)
-6.  The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+1. Feel free to make any changes on your own.
