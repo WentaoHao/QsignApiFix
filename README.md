@@ -9,7 +9,7 @@
 [Qsign](https://gitee.com/touchscale/Qsign)  中提供了windows的重启方式，但是没有其他操作系统的做法。
 本脚本适用于ubuntu，其他linux系统或许也可用，自己试试吧。
 
-截止本次修改readme.md，本脚本自测连续运行19天无任何问题，内存占用约750MB。
+截止本次修改readme.md，本脚本自测连续运行19天无任何问题，整个操作系统运行时内存占用约750MB。
 
 
 ```
