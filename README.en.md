@@ -8,8 +8,7 @@ Miao-Yunzai is a handy Genshin Impact QQ robot, but it often encounters issues w
 However, the API used by higher versions of ICQQ tends to crash frequently, and switching to lower versions may result in login failures. Therefore, this script is written to automatically restart it.
 [Here](https://gitee.com/touchscale/Qsign/issues/I8GLZN) provides a restart method for Windows, but there is no method for other operating systems. This script is suitable for Ubuntu, and perhaps other Linux systems may also work. Give it a try.
 
-As of the latest update to the README.en.md, this script has been self-tested and running continuously for 19 days without any issues, with a memory footprint of approximately 750MB.
-
+As of the latest update to README.en.md, this script has undergone self-testing and has been running continuously for 19 days without any issues. The entire operating system has been utilizing approximately 750MB of memory during runtime.
 
 ```
 -------状态-------
