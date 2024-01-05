@@ -2,6 +2,8 @@
 
 ### Please use with [Qsign](https://gitee.com/touchscale/Qsign)
 
+#### This English document is no longer being updated. If necessary, please use machine translation to translate the Chinese document.
+
 #### Introduction
 Miao-Yunzai is a handy Genshin Impact QQ robot, but it often encounters issues with the ICQQ it uses. To address the problems with ICQQ, it's necessary to set up a self-built API ([Qsign](https://gitee.com/touchscale/Qsign)).
 
